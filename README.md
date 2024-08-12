@@ -1,7 +1,7 @@
 # Fall guys simulator
 This python script creates histogram diagrams (saved as '.png' files) that visualise the probability of advancing in a round in the PlayStation game "Fall Guys". It is designed for the cooperative (coop) game mode.
 
-## Features:
+## Features
 The following parameters can be customised in the 'main' function:
 - **Number of teams**: Adjust the total number of teams participating in the round.
 - **Number of advancing teams**: Set the number of teams that advance to the next round.
