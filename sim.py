@@ -29,20 +29,20 @@ def calculate_histogram(no_tries, no_teams, no_advancing_teams, round_no):
     # Get non-zero indexes for better plotting
     non_zero_indexes = np.nonzero(hist_plot)[0]
 
-    # Make plot
+    # plot
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5))
 
     ax1.bar(non_zero_indexes + 1, hist_plot[non_zero_indexes])
-    ax1.set_title('histogram')
-    ax1.set_xlabel('points')
-    ax1.set_ylabel('frequency of lowest points needed to advance')
+    ax1.set_title('distr. of minimum points to advance')
+    ax1.set_xlabel('team score')
+    ax1.set_ylabel('percentage of simulations')
 
     ax2.bar(non_zero_indexes + 1, hist_cumulative[non_zero_indexes], color='orange')
-    ax2.set_title("cumulative_probability's")
-    ax2.set_xlabel('points')
-    ax2.set_ylabel('probability to advance')  # Update the y-axis label
+    ax2.set_title("cumulative probability of advancing")
+    ax2.set_xlabel('team score')
+    ax2.set_ylabel('chance of advancing')
 
-    # Add main title
+    # Main title
     main_title = f"Round {round_no}"
     fig.suptitle(main_title, fontsize=16)
 
